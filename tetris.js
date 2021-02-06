@@ -5,6 +5,8 @@ var paused = false;
 var localStorageName = "TetrisTopScore";
 var highScore = localStorage.getItem("highScore");
 
+
+
 //const pauseKey : false;
 //const enterKey : false;
 
@@ -54,8 +56,11 @@ function togglePause() {
   var x = document.getElementById("status");
   if (paused) {
     x.style.display = "block";
+    //pauseAudio();
   } else {
     x.style.display = "none";
+    //playAudio();
+
   }
     update();
 }
@@ -65,7 +70,41 @@ function startGame() {
   saveScore();
   player.score = 0;
   playerReset();
+  playAudio();
 }
+
+
+// const song = document.getElementById('themeSong');
+//
+// function playAudio() {
+//   song.play();
+// }
+//
+// function pauseAudio() {
+//   song.pause();
+// }
+
+
+var audioElement = document.createElement('audio');
+audioElement.setAttribute('src', 'https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.ogg');
+
+function PlayAudio()
+{
+
+	audioElement.load;
+	audioElement.play();
+
+}
+
+function PauseAudio()
+{
+	audioElement.pause();
+}
+
+
+
+
+
 
 // function pauseGame() {
 //     paused = !paused; // toggle the paused value (false <-> true)
@@ -171,6 +210,7 @@ function draw() {
 
   drawMatrix(arena, {x:0, y:0})
   drawMatrix(player.matrix, player.pos);
+  //document.getElementById('themeSong').play();
 
 }
 
@@ -341,7 +381,7 @@ document.addEventListener('keydown', event => {
       togglePause(); //Press P to pause
   } else if (event.keyCode === 27) {
       startGame(); //Press P to pause
-  } 
+  }
 });
 
 
