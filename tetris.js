@@ -59,6 +59,7 @@ function togglePause() {
     //pauseAudio();
   } else {
     x.style.display = "none";
+    //mySound.play();
     //playAudio();
 
   }
@@ -104,6 +105,9 @@ function PauseAudio()
 }
 
 
+//const mySound = document.getElementById("themeSong");
+//const correctButton = document.getElementById("correct");
+//correctButton.addEventListener("click", function(){ mySound.play(); });
 
 
 
@@ -382,7 +386,9 @@ document.addEventListener('keydown', event => {
   } else if (event.keyCode === 80) {
       togglePause(); //Press P to pause
   } else if (event.keyCode === 27) {
-      startGame(); //Press P to pause
+      startGame(); //Press Esc the end game
+  } else if (event.keyCode === 32) {
+      playerRotate(1);
   }
 });
 

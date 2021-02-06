@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=shadow-multiple">
     <title>Tetris</title>
 
     <style media="screen">
@@ -21,10 +22,17 @@
         height: 80vh;
       }
 
+      h1 {
+         font-family: "Audiowide", sans-serif;
+          font-variant: small-caps;
+          font-size: 3em;
+          color: black;
+      }
+
       #status {
         position: absolute;
         width: 300px;
-        height: 300px;
+        height: 350px;
         z-index: 15;
         top: 50%;
         left: 50%;
@@ -45,7 +53,7 @@
     <br/>
   <!--  <div id="topScore">test</div> -->
     <div id="status">
-      <h1>Tetris<br/></h1>
+      <h1 class="font-effect-shadow-multiple">Tetris<br/></h1>
       <h4>P - Play/Pause</h4>
       <h4>Esc - End Game</h4>
 
@@ -74,6 +82,6 @@
           Your browser does not support the audio element.
         </audio>
 </center>
-
+<!-- <button id="correct">Music</button> -->
   </body>
 </html>
