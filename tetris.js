@@ -1,6 +1,6 @@
 const canvas = document.getElementById("tetris");
 const context = canvas.getContext("2d");
-var paused = false;
+var paused = true;
 
 var localStorageName = "TetrisTopScore";
 var highScore = localStorage.getItem("highScore");
@@ -69,6 +69,8 @@ function startGame() {
   arena.forEach(row => row.fill(0));
   saveScore();
   player.score = 0;
+  //paused = false;
+  togglePause();
   playerReset();
   playAudio();
 }

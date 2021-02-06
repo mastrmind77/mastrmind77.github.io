@@ -10,7 +10,7 @@
         background: #202028;
         color: #fff;
         font-family: sans-serif;
-        font-size: 2em;
+        font-size: 1em;
         text-align: center;
         background-image: url("http://4.bp.blogspot.com/-wKEAyn1Hqfo/UTazxFqehjI/AAAAAAAAilo/ErAfKhBGGrc/s1600/Abstract+Wallpapers+(11).jpg");
         background-size: cover;
@@ -24,13 +24,17 @@
       #status {
         position: absolute;
         width: 300px;
-        height: 100px;
+        height: 300px;
         z-index: 15;
         top: 50%;
         left: 50%;
         margin: -100px 0 0 -150px;
         background: red;
-        display: none;
+        /* display: none; */
+      }
+
+      #score {
+        font-size: 2em;
       }
 
     </style>
@@ -40,7 +44,19 @@
     <div id="score"></div>
     <br/>
   <!--  <div id="topScore">test</div> -->
-    <div id="status"><br/>Paused</div>
+    <div id="status">
+      <h1>Tetris<br/></h1>
+      <h4>P - Play/Pause</h4>
+      <h4>Esc - End Game</h4>
+
+      L Arrow - move left<br/>
+      R Arrow - move right<br/>
+      Down Arrow - move down<br/>
+      Q - Rotate Left<br/>
+      W - rotate right<br/><br/>
+      Play button - start music
+
+    </div>
 
     <canvas id="tetris" width="240" height="400">
 
