@@ -4,7 +4,8 @@ var paused = true;
 
 var localStorageName = "TetrisTopScore";
 var highScore = localStorage.getItem("highScore");
-
+var totalRows = 0;
+var moveScore = 0;
 
 
 //const pauseKey : false;
@@ -88,21 +89,21 @@ function startGame() {
 // }
 
 
-var audioElement = document.createElement('audio');
-audioElement.setAttribute('src', 'https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.ogg');
-
-function PlayAudio()
-{
-
-	audioElement.load;
-	audioElement.play();
-
-}
-
-function PauseAudio()
-{
-	audioElement.pause();
-}
+// var audioElement = document.createElement('audio');
+// audioElement.setAttribute('src', 'https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.ogg');
+//
+// function PlayAudio()
+// {
+//
+// 	audioElement.load;
+// 	audioElement.play();
+//
+// }
+//
+// function PauseAudio()
+// {
+// 	audioElement.pause();
+// }
 
 
 //const mySound = document.getElementById("themeSong");
@@ -131,7 +132,14 @@ function arenaSweep() {
     arena.unshift(row);
     ++y;
 
+    ++totalRows;
+
+    //if (movescore =1) {
+    //  totalRows = totalRows + 1;
+    //}
+
     player.score += rowCount * 10;
+    //totalRows = totalRows + rowCount;
     rowCount *= 2;
   }
   updateScore();
@@ -346,7 +354,8 @@ function update(time = 0){
 
 //Updates the score in the HTML
 function updateScore() {
-  document.getElementById('score').innerText = player.score;
+
+  document.getElementById('score').innerText = "score: " + player.score + " | rows: " + totalRows;
   //document.getElementById('topScore').innerText = highScore;
 }
 
@@ -388,7 +397,7 @@ document.addEventListener('keydown', event => {
   } else if (event.keyCode === 27) {
       startGame(); //Press Esc the end game
   } else if (event.keyCode === 38) {
-      playerRotate(1);
+      playerRotate(1); //Press Up to rotate
   }
 });
 
