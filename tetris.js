@@ -387,7 +387,7 @@ document.addEventListener('keydown', event => {
       togglePause(); //Press P to pause
   } else if (event.keyCode === 27) {
       startGame(); //Press Esc the end game
-  } else if (event.keyCode === 32) {
+  } else if (event.keyCode === 38) {
       playerRotate(1);
   }
 });
