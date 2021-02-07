@@ -1,0 +1,71 @@
+body {
+  background: #202028;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1em;
+  text-align: center;
+  background-image: url("http://4.bp.blogspot.com/-wKEAyn1Hqfo/UTazxFqehjI/AAAAAAAAilo/ErAfKhBGGrc/s1600/Abstract+Wallpapers+(11).jpg");
+  background-size: cover;
+}
+
+canvas {
+  border: solid .2em #fff;
+  height: 80vh;
+
+}
+
+
+/* Tetris Title */
+h1 {
+   font-family: "Audiowide", sans-serif;
+    font-variant: small-caps;
+    font-size: 3.5em;
+    color: black;
+}
+
+/*Pause Screen pop up */
+#status {
+  position: absolute;
+  width: 300px;
+  height: 370px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  background: red;
+  /* display: none; */
+}
+
+#score {
+  font-size: 2em;
+}
+
+
+.grid-container {
+  display: grid;
+  grid:  auto / 50px auto;
+  grid-gap: 5px;
+  padding: 10px;
+  width: 150px;
+  font-variant: small-caps;
+   justify-content: space-evenly;
+   padding-left:70px;
+}
+
+
+
+.item1, .item3, .item5, .item7, .item9, .item11, .item13{
+	text-align: center;
+}
+.item2, .item4, .item6, .item8, .item10, .item12, .item14{
+	text-align: left!important;
+}
+
+.item1, .item2, .item3, .item4 {
+	font-weight: bold;
+    font-size: 1.2em;
+}
+
+ .item3, .item4 {
+    margin-bottom: 10px;
+}

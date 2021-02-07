@@ -4,46 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=shadow-multiple">
+    <link rel="stylesheet" href="tetris.css">
     <title>Tetris</title>
 
     <style media="screen">
-      body {
-        background: #202028;
-        color: #fff;
-        font-family: sans-serif;
-        font-size: 1em;
-        text-align: center;
-        background-image: url("http://4.bp.blogspot.com/-wKEAyn1Hqfo/UTazxFqehjI/AAAAAAAAilo/ErAfKhBGGrc/s1600/Abstract+Wallpapers+(11).jpg");
-        background-size: cover;
-      }
-
-      canvas {
-        border: solid .2em #fff;
-        height: 80vh;
-      }
-
-      h1 {
-         font-family: "Audiowide", sans-serif;
-          font-variant: small-caps;
-          font-size: 3em;
-          color: black;
-      }
-
-      #status {
-        position: absolute;
-        width: 300px;
-        height: 350px;
-        z-index: 15;
-        top: 50%;
-        left: 50%;
-        margin: -100px 0 0 -150px;
-        background: red;
-        /* display: none; */
-      }
-
-      #score {
-        font-size: 2em;
-      }
 
     </style>
 
@@ -54,15 +18,24 @@
   <!--  <div id="topScore">test</div> -->
     <div id="status">
       <h1 class="font-effect-shadow-multiple">Tetris<br/></h1>
-      <h4>P - Play/Pause</h4>
-      <h4>Esc - End Game</h4>
 
-      &#8592; - move left<br/>
-      &nbsp; &#8594; - move right<br/>
-      &nbsp; &nbsp; &#8595;  - move down<br/>
-      &nbsp; Q - Rotate Left<br/>
-      W/&#8593; - rotate right<br/><br/>
-      Play button - start music
+      <div class="grid-container">
+        <div class="item1">P</div>
+        <div class="item2">Play/Pause</div>
+        <div class="item3">Esc</div>
+        <div class="item4">End Game</div>
+
+        <div class="item5">&#8592;</div>
+        <div class="item6">Left</div>
+        <div class="item7">&#8594;</div>
+        <div class="item8">Right</div>
+        <div class="item9">Q</div>
+        <div class="item10">Left</div>
+        <div class="item11">W &#8593;</div>
+        <div class="item12">Right</div>
+        <div class="item13">&#9655;</div>
+        <div class="item14">Start Music</div>
+      </div>
 
     </div>
 
@@ -75,7 +48,7 @@
       <source src="https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.mp3" type="audio/mpeg">
       <embed src="https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.mp3" autostart="true" loop="true" hidden="true">
     </audio> -->
-    
+
 <!-- <script>
   function play(){
   var audio = new Audio('https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.ogg');
