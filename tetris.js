@@ -133,6 +133,7 @@ function arenaSweep() {
     ++y;
 
     ++totalRows;
+    levelUp();
 
     //if (movescore =1) {
     //  totalRows = totalRows + 1;
@@ -300,7 +301,12 @@ function playerMove(dir) {
 //creates a random piece at the top middle of the board
 function playerReset() {
   const pieces = 'ILJOTSZ';
+  // var currentPiece = nextPiece;
+  // nextPiece = createPiece(pieces[pieces.length * Math.random() | 0]);
+  // player.matrix = currentPiece;
+
   player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
+
   player.pos.y = 0;
   player.pos.x = (arena[0].length / 2 | 0) -
                  (player.matrix[0].length / 2 | 0);
@@ -332,6 +338,15 @@ function playerRotate(dir) {
 
 let dropCounter = 0;
 let dropInterval = 1000;
+let gameLevel = 1;
+let speedMultiplier = 1;
+
+function levelUp() {
+  if (Math.floor(totalRows/10) > gameLevel) {
+    ++gameLevel;
+    dropInterval *= 0.95;
+  }
+}
 
 
 let lastTime = 0;
@@ -339,6 +354,8 @@ let lastTime = 0;
 //draws the animation frames
 function update(time = 0){
 //    currentState(); // call the current game state
+
+
     const deltaTime = time - lastTime;
     lastTime = time;
 
@@ -356,7 +373,7 @@ function update(time = 0){
 //Updates the score in the HTML
 function updateScore() {
 
-  document.getElementById('score').innerText = "score: " + player.score + " | rows: " + totalRows  + " | high:"+ highScore;
+  document.getElementById('score').innerText = "score: " + player.score + " | rows: " + totalRows  + " | high:"+ highScore + " | level:" + gameLevel;
   //document.getElementById('topScore').innerText = highScore;
 }
 
@@ -380,6 +397,14 @@ const player = {
   matrix: null,
   score: 0,
 }
+
+const nextPiece = {
+  matrix: null,
+}
+
+// const currentPiece = {
+//   matrix: createPiece(pieces[pieces.length * Math.random() | 0]),
+// }
 
 //player controls
 document.addEventListener('keydown', event => {
