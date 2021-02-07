@@ -308,6 +308,7 @@ function playerReset() {
     arena.forEach(row => row.fill(0));
     saveScore();
     player.score = 0;
+    totalRows = 0;
     updateScore();
   }
 }
@@ -355,20 +356,20 @@ function update(time = 0){
 //Updates the score in the HTML
 function updateScore() {
 
-  document.getElementById('score').innerText = "score: " + player.score + " | rows: " + totalRows;
+  document.getElementById('score').innerText = "score: " + player.score + " | rows: " + totalRows  + " | high:"+ highScore;
   //document.getElementById('topScore').innerText = highScore;
 }
 
 //define the colors of the pieces
 const colors = [
   null,
-  'red',
-  'blue',
-  'violet',
-  'green',
-  'yellow',
-  'orange',
-  'pink',
+  'red',      // T
+  'blue',     // O
+  'violet',   // L
+  'limegreen',// J
+  'yellow',   // I
+  'orange',   // S
+  'skyblue',  // Z
 ];
 
 const arena = createMatrix(12, 20); //defines size of board
@@ -382,16 +383,16 @@ const player = {
 
 //player controls
 document.addEventListener('keydown', event => {
-  if (event.keyCode === 37) {
-    playerMove(-1);
-  } else if (event.keyCode === 39) {
-    playerMove(+1);
-  } else if (event.keyCode === 40) {
-      playerDrop();
+  if (event.keyCode === 37 || event.keyCode === 74) {
+    playerMove(-1); //left arrow or J
+  } else if (event.keyCode === 39 || event.keyCode === 76) {
+    playerMove(+1); //right arrow of L
+  } else if (event.keyCode === 40 || event.keyCode === 75) {
+      playerDrop(); //Down arrow to drop or K
   } else if (event.keyCode === 81) {
-      playerRotate(-1);
-  } else if (event.keyCode === 87) {
-      playerRotate(1);
+      playerRotate(-1); // Q to rotate left
+  } else if (event.keyCode === 87 || event.keyCode === 73) {
+      playerRotate(1); // W to rotate Right or I
   } else if (event.keyCode === 80) {
       togglePause(); //Press P to pause
   } else if (event.keyCode === 27) {
@@ -400,6 +401,26 @@ document.addEventListener('keydown', event => {
       playerRotate(1); //Press Up to rotate
   }
 });
+
+
+// //Touch controls
+// var myElement = document.getElementById('item1');
+//
+// // create a simple instance
+// // by default, it only adds horizontal recognizers
+// var mc = new Hammer(myElement);
+//
+// // let the pan gesture support all directions.
+// // this will block the vertical scrolling on a touch-device while on the element
+// mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+//
+// // listen to events...
+// mc.on("panleft panright panup pandown tap press", function(ev) {
+//     // myElement.textContent = ev.type +" gesture detected.";
+//     console.log(ev);
+// });
+
+
 
 
 //loadScore();

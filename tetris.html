@@ -11,6 +11,38 @@
 
     </style>
 
+    <script src="js/Touch.js"></script>
+    <script src="js/UTIL.js"></script>
+
+    <script>
+      Touch.init();
+    </script>
+    
+<!-- <script src="hammer.js"></script> -->
+
+<!-- <script type="text/javascript">
+// var hammertime = new Hammer('tetris');
+//  hammertime.on('pan', function(ev) {
+//   console.log(ev);
+//  });
+
+var myElement = document.getElementById("tetris");
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// let the pan gesture support all directions.
+// this will block the vertical scrolling on a touch-device while on the element
+//mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+// listen to events...
+mc.on("panleft panright panup pandown tap press", function(ev) {
+    // myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev);
+});
+</script> -->
+
   </head>
   <body>
     <div id="score"></div>
@@ -25,24 +57,28 @@
         <div class="item3">Esc</div>
         <div class="item4">End Game</div>
 
-        <div class="item5">&#8592;</div>
+        <div class="item5">J &#8592;</div>
         <div class="item6">Left</div>
-        <div class="item7">&#8594;</div>
+        <div class="item7">L &#8594;</div>
         <div class="item8">Right</div>
         <div class="item9">Q</div>
-        <div class="item10">Left</div>
-        <div class="item11">W &#8593;</div>
-        <div class="item12">Right</div>
-        <div class="item13">&#9655;</div>
-        <div class="item14">Start Music</div>
+        <div class="item10">Rotate Left</div>
+        <div class="item11">I W &#8593;</div>
+        <div class="item12">Rotate Right</div>
+        <div class="item13">K &#8595;</div>
+        <div class="item14">Drop</div>
+
+        <div class="item15">&#9655;</div>
+        <div class="item16">Start Music</div>
       </div>
 
     </div>
 
-    <canvas id="tetris" width="240" height="400">
 
+    <canvas id="tetris" width="240" height="400">
     </canvas>
     <script src="tetris.js"></script>
+
 
     <!-- <audio controls autoplay loop>
       <source src="https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.mp3" type="audio/mpeg">
