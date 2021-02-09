@@ -549,7 +549,9 @@ mc.on(" tap doubletap press panend panup panstart swipedown swipeup", function(e
         playerRotate(1);// Swipe up
     } else if (ev.type === "press") {
          togglePause(); //Press P to pause
-    } 
+    } else if (ev.type === "tap") {
+        playerRotate(1); // W to rotate Right or I
+    }
 });
 
 
