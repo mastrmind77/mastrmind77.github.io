@@ -1,0 +1,13 @@
+{
+  "name": "Tetris",
+  "short_name": "Tetris",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "black",
+  "description": "A basic game of Tetris.",
+  "icons": [{
+    "src": "apple-touch-icon.png",
+    "sizes": "114x114",
+    "type": "image/png"
+  }]
+}
