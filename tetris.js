@@ -521,37 +521,39 @@ mc.get('tap').set({ enable: true });
 //mc.add( new Hammer.Swipe({ event: 'swipeleft' }) );
 
 // listen to events...
-mc.on(" tap doubletap press panend panup panstart swipedown swipeup", function(ev) {
+//mc.on(" tap doubletap press panend panup panstart swipedown swipeup", function(ev) {
+  mc.on(" tap press swiperight swipeleft swipedown swipeup", function(ev) {
+
 //mc.on("panleft panright panup pandown tap press", function(ev) {
     // myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type);
-    // if (ev.type === "swipeleft") {
-    //   playerMove(-1); //left arrow or J
-    // } else if (ev.type === "swiperight") {
-    //   playerMove(+1); //right arrow of L
-    // } else if (ev.type === "swipedown") {
-    //     playerDrop(); //Down arrow to drop or K
-    // } else if (ev.type === "doubletap") {
-    //     hardDrop(); //hard drop with doubletap
-    // }else if (ev.type === "tap") {
-    //     playerRotate(1); // W to rotate Right or I
-    // } else if (ev.type === "press") {
-    //     togglePause(); //Press P to pause
-    // }
-
-    if (ev.type === 'panend' && ev.velocityX < -0.3 && ev.distance > 10) {
-        playerMove(-1);// Swipe left
-    } else if (ev.type === 'panend' && ev.velocityX > 0.3 && ev.distance > 10) {
-        playerMove(+1);// Swipe right
-    } else if (ev.type === 'panend' && ev.velocityY > -0.3 && ev.distance > 10) {
-        hardDrop();// Swipe down
-    } else if (ev.type === 'panend' && ev.velocityY > 0.3 && ev.distance > 10) {
-        playerRotate(1);// Swipe up
-    } else if (ev.type === "press") {
-         togglePause(); //Press P to pause
-    } else if (ev.type === "tap") {
+    if (ev.type === "swipeleft") {
+      playerMove(-1); //left arrow or J
+    } else if (ev.type === "swiperight") {
+      playerMove(+1); //right arrow of L
+    } else if (ev.type === "swipedown") {
+        hardDrop(); //Down arrow to drop or K
+    } else if (ev.type === "doubletap") {
+        hardDrop(); //hard drop with doubletap
+    }else if (ev.type === "tap") {
         playerRotate(1); // W to rotate Right or I
+    } else if (ev.type === "press") {
+        togglePause(); //Press P to pause
     }
+
+    // if (ev.type === 'panend' && ev.velocityX < -0.3 && ev.distance > 10) {
+    //     playerMove(-1);// Swipe left
+    // } else if (ev.type === 'panend' && ev.velocityX > 0.3 && ev.distance > 10) {
+    //     playerMove(+1);// Swipe right
+    // } else if (ev.type === 'panend' && ev.velocityY > -0.3 && ev.distance > 10) {
+    //     hardDrop();// Swipe down
+    // } else if (ev.type === 'panend' && ev.velocityY > 0.3 && ev.distance > 10) {
+    //     playerRotate(1);// Swipe up
+    // } else if (ev.type === "press") {
+    //      togglePause(); //Press P to pause
+    // } else if (ev.type === "tap") {
+    //     playerRotate(1); // W to rotate Right or I
+    // }
 });
 
 
