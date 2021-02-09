@@ -299,6 +299,27 @@ function playerDrop(){
   dropCounter = 0;
 }
 
+//Hard drop
+function hardDrop(){
+  var steps=1;
+  do {
+    player.pos.y++;
+    steps++;
+    if (collide(arena, player)) {
+      player.pos.y--;
+      merge(arena, player);
+      playerReset();
+      arenaSweep();
+      updateScore();
+      steps=0
+  }
+  dropCounter = 0;
+  }
+while (steps > 0)
+
+}
+
+
 
 //Allows a piece to rotate in either direction
 function rotate(matrix, dir) {
@@ -454,6 +475,8 @@ document.addEventListener('keydown', event => {
       playerRotate(1); // W to rotate Right or I
   } else if (event.keyCode === 80) {
       togglePause(); //Press P to pause
+  } else if (event.keyCode === 32) {
+      hardDrop(); //Press Space to hard drop
   } else if (event.keyCode === 27) {
       startGame(); //Press Esc the end game
   } else if (event.keyCode === 38) {

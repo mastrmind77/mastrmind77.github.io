@@ -2,8 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
+    <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png" /> -->
+    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=shadow-multiple">
     <link rel="stylesheet" href="tetris.css">
     <title>Tetris</title>
@@ -18,6 +23,11 @@
 
 <script src="hammer.js"></script>
 
+<script>
+    function BlockElasticScroll(event) {
+        event.preventDefault();
+    }
+    </script>
     <!-- <script src="Touch.js"></script>
     <script src="UTIL.js"></script> -->
 
@@ -51,7 +61,7 @@ mc.on("panleft panright panup pandown tap press", function(ev) {
 </script> -->
 
   </head>
-  <body>
+  <body ontouchmove="BlockElasticScroll(event);">
     <div id="score"></div>
     <br/>
   <!--  <div id="topScore">test</div> -->
