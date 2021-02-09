@@ -10,7 +10,6 @@ var moveScore = 0;
 context.scale(20, 20); //Sets display scale so a pixel is 20x20
 
 
-
 //****************start Random Background easter egg******************//
 var images = [], x = -1;
       images[0] ='http://www.muhiloosai.com/wp-content/uploads/2016/10/cute-husky-puppies-uhd-wallpaper.jpg';
