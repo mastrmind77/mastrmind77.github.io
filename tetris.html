@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=shadow-multiple">
     <link rel="stylesheet" href="tetris.css">
     <title>Tetris</title>
@@ -94,11 +95,18 @@ mc.on("panleft panright panup pandown tap press", function(ev) {
 
 <button onclick='play'>Music</button> -->
 
-<center>
+<audio id="playmusic" src="https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.ogg" preload="auto"></audio>
+<audio id="clearsound" src="https://raw.githubusercontent.com/dionyziz/canvas-tetris/master/sound/pop.ogg" preload="auto"></audio>
+
+<!-- <center>
     <audio id="themeSong" controls loop>
         <source src="https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.ogg">
           Your browser does not support the audio element.
         </audio>
+</center> -->
+
+<center>
+<input type="button" value="Music" id="musicBtn"onclick="musicToggle()"></input>
 </center>
 <!-- <button id="correct">Music</button> -->
   </body>

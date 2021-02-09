@@ -39,6 +39,19 @@ context.scale(20, 20);
 
 
 
+// Music control
+var music = false;
+function musicToggle() {
+  music= !music
+  if ( music == true) {
+  	document.getElementById("musicBtn").value="Music on";
+    document.getElementById( 'playmusic' ).play();
+    } else document.getElementById("musicBtn").value="Music off";
+      document.getElementById( 'playmusic' ).pause();
+}
+
+
+
 function saveScore() {
   if(highScore !== null){
     if (player.score > highScore) {
@@ -57,6 +70,7 @@ function togglePause() {
   var x = document.getElementById("status");
   if (paused) {
     x.style.display = "block";
+    document.getElementById( 'playmusic' ).pause();
     //pauseAudio();
   } else {
     x.style.display = "none";
@@ -133,6 +147,9 @@ function arenaSweep() {
     ++y;
 
     ++totalRows;
+
+      document.getElementById( 'clearsound' ).play();
+
     levelUp();
 
     //if (movescore =1) {
@@ -365,6 +382,9 @@ function update(time = 0){
     }
     draw();
     if (!paused) {
+      if (music == true) {
+        document.getElementById( 'playmusic' ).play();
+      }
       requestAnimationFrame(update);
   }
 
@@ -424,6 +444,8 @@ document.addEventListener('keydown', event => {
       startGame(); //Press Esc the end game
   } else if (event.keyCode === 38) {
       playerRotate(1); //Press Up to rotate
+  } else if (event.keyCode === 84) {
+      musicToggle(); //Press t to toggle music
   }
 });
 
