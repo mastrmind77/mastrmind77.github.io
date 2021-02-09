@@ -318,7 +318,7 @@ function playerReset() {
     saveScore();
     player.score = 0;
     totalRows = 0;
-    gameLevel = 0;
+    gameLevel = 1;
     updateScore();
   }
 }
