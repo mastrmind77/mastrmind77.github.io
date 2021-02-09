@@ -38,6 +38,20 @@ context.scale(20, 20);
 //var highscore = localStorage.getItem("highscore");
 
 
+// Get a reference to an element.
+// var square = document.querySelector('score');
+//
+// // Create an instance of Hammer with the reference.
+// var hammer = new Hammer(square);
+//
+// // Subscribe to a quick start event: press, tap, or doubletap.
+// // For a full list of quick start events, read the documentation.
+// hammer.on('press', function(e) {
+//   e.target.classList.toggle('expand');
+//   console.log("You're pressing me!");
+//   console.log(e);
+// });
+
 
 // Music control
 var music = false;
@@ -450,22 +464,35 @@ document.addEventListener('keydown', event => {
 });
 
 
-// //Touch controls
-// var myElement = document.getElementById('item1');
-//
-// // create a simple instance
-// // by default, it only adds horizontal recognizers
-// var mc = new Hammer(myElement);
-//
-// // let the pan gesture support all directions.
-// // this will block the vertical scrolling on a touch-device while on the element
-// mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-//
-// // listen to events...
-// mc.on("panleft panright panup pandown tap press", function(ev) {
-//     // myElement.textContent = ev.type +" gesture detected.";
-//     console.log(ev);
-// });
+//Touch controls
+var myElement = document.getElementById('touchy');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// let the pan gesture support all directions.
+// this will block the vertical scrolling on a touch-device while on the element
+mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+// listen to events...
+mc.on("panleft panright panup pandown tap press", function(ev) {
+    // myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev);
+
+
+    if (ev.type === "panleft") {
+      playerMove(-1); //left arrow or J
+    } else if (ev.type === "panright") {
+      playerMove(+1); //right arrow of L
+    } else if (ev.type === "pandown") {
+        playerDrop(); //Down arrow to drop or K
+    } else if (ev.type === "tap") {
+        playerRotate(1); // W to rotate Right or I
+    } else if (ev.type === "press") {
+        togglePause(); //Press P to pause
+    }
+});
 
 
 

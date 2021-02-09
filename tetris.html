@@ -10,14 +10,20 @@
 
     <style media="screen">
 
+    #myElement {
+      background: silver;
+      height: 400px;
+    }
     </style>
 
-    <script src="Touch.js"></script>
-    <script src="UTIL.js"></script>
+<script src="hammer.js"></script>
 
-    <script>
+    <!-- <script src="Touch.js"></script>
+    <script src="UTIL.js"></script> -->
+
+    <!-- <script>
       Touch.init();
-    </script>
+    </script> -->
 
 <!-- <script src="hammer.js"></script> -->
 
@@ -75,9 +81,10 @@ mc.on("panleft panright panup pandown tap press", function(ev) {
 
     </div>
 
-
+<div id="touchy">
     <canvas id="tetris" width="240" height="400">
     </canvas>
+</div>
     <script src="tetris.js"></script>
 
 
