@@ -509,6 +509,8 @@ mc.on(" tap press panend panup panstart swipedown", function(ev) {
         playerMove(-1);// Swipe left
     } else if (ev.type === 'panend' && ev.velocityX > 0.3 && ev.distance > 10) {
         playerMove(+1);// Swipe right
+    } else if (ev.type === 'panend' && ev.velocityY > -0.3 && ev.distance > 10) {
+        playerDrop();// Swipe right
     }
 });
 
