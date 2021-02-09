@@ -514,7 +514,7 @@ mc.get('tap').set({ enable: true });
 //mc.add( new Hammer.Swipe({ event: 'swipeleft' }) );
 
 // listen to events...
-mc.on(" tap press panend panup panstart swipedown", function(ev) {
+mc.on(" tap doubletap press panend panup panstart swipedown", function(ev) {
 //mc.on("panleft panright panup pandown tap press", function(ev) {
     // myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type);
@@ -524,7 +524,9 @@ mc.on(" tap press panend panup panstart swipedown", function(ev) {
       playerMove(+1); //right arrow of L
     } else if (ev.type === "swipedown") {
         playerDrop(); //Down arrow to drop or K
-    } else if (ev.type === "tap") {
+    } else if (ev.type === "doubletap") {
+        hardDrop(); //hard drop with doubletap
+    }else if (ev.type === "tap") {
         playerRotate(1); // W to rotate Right or I
     } else if (ev.type === "press") {
         togglePause(); //Press P to pause
