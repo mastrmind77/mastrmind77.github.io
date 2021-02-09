@@ -471,22 +471,35 @@ var myElement = document.getElementById('touchy');
 // by default, it only adds horizontal recognizers
 var mc = new Hammer(myElement);
 
+// mc.add(new Hammer.Swipe({
+//     direction: Hammer.DIRECTION_HORIZONTAL,
+//     threshold: 0
+// }));
+
+mc.get('swipe').set({ enable: true });
+mc.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+mc.get('tap').set({ enable: true });
+
+
 // let the pan gesture support all directions.
 // this will block the vertical scrolling on a touch-device while on the element
 //mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
+//mc.add( new Hammer.Tap({ event: 'doubletap', taps: 2 }) );
+// Single tap recognizer
+//mc.add( new Hammer.Swipe({ event: 'swiperight' }) );
+//mc.add( new Hammer.Swipe({ event: 'swipeleft' }) );
+
 // listen to events...
-mc.on("panleft panright tap press", function(ev) {
+mc.on("swipeleft swiperight swipedown swipeup tap press", function(ev) {
 //mc.on("panleft panright panup pandown tap press", function(ev) {
     // myElement.textContent = ev.type +" gesture detected.";
-    console.log(ev);
-
-
-    if (ev.type === "panleft") {
+    console.log(ev.type);
+    if (ev.type === "swipeleft") {
       playerMove(-1); //left arrow or J
-    } else if (ev.type === "panright") {
+    } else if (ev.type === "swiperight") {
       playerMove(+1); //right arrow of L
-    } else if (ev.type === "pandown") {
+    } else if (ev.type === "swipedown") {
         playerDrop(); //Down arrow to drop or K
     } else if (ev.type === "tap") {
         playerRotate(1); // W to rotate Right or I
