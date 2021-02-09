@@ -35,30 +35,8 @@
       Touch.init();
     </script> -->
 
-<!-- <script src="hammer.js"></script> -->
 
-<!-- <script type="text/javascript">
-// var hammertime = new Hammer('tetris');
-//  hammertime.on('pan', function(ev) {
-//   console.log(ev);
-//  });
 
-var myElement = document.getElementById("tetris");
-
-// create a simple instance
-// by default, it only adds horizontal recognizers
-var mc = new Hammer(myElement);
-
-// let the pan gesture support all directions.
-// this will block the vertical scrolling on a touch-device while on the element
-//mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-
-// listen to events...
-mc.on("panleft panright panup pandown tap press", function(ev) {
-    // myElement.textContent = ev.type +" gesture detected.";
-    console.log(ev);
-});
-</script> -->
 
   </head>
   <body ontouchmove="BlockElasticScroll(event);" id="body">
