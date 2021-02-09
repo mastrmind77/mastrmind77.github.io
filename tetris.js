@@ -491,7 +491,7 @@ mc.get('tap').set({ enable: true });
 //mc.add( new Hammer.Swipe({ event: 'swipeleft' }) );
 
 // listen to events...
-mc.on(" tap press panend panup panstart", function(ev) {
+mc.on(" tap press panend panup panstart swipedown", function(ev) {
 //mc.on("panleft panright panup pandown tap press", function(ev) {
     // myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type);
