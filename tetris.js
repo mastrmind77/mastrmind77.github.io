@@ -13,6 +13,26 @@ var moveScore = 0;
 
 context.scale(20, 20);
 
+var images = [], x = -1;
+      images[0] ='http://www.muhiloosai.com/wp-content/uploads/2016/10/cute-husky-puppies-uhd-wallpaper.jpg';
+      images[1] ='https://weneedfun.com/wp-content/uploads/2016/12/Siberian-Husky-Puppies-18.jpg';
+      images[2] ='https://weneedfun.com/wp-content/uploads/2016/12/Siberian-Husky-Puppies-18.jpg';
+      images[3] ='https://gfp-2a3tnpzj.stackpathdns.com/wp-content/uploads/2018/05/four-siberian-husky-puppies-in-a-yard.jpg';
+      images[4] ='https://pixfeeds.com/images/dogs/1280-590181290-malamute-puppies-lying-on-woolen-plaid.jpg';
+      images[5] ='https://cdn0.wideopenpets.com/wp-content/uploads/2017/05/AdobeStock_107723771.jpeg';
+      images[6] ='https://images.wagwalkingweb.com/media/training_guides/leash-train-a-husky-puppy/hero/How-to-Leash-Train-a-Husky-Puppy.jpg';
+      images[7] ='https://www.huskypuppiesinfo.com/wp-content/uploads/2018/03/Choosing-a-Husky-Puppy.jpg';
+      images[8] ='https://thehappypuppysite.com/wp-content/uploads/2017/12/pictures-of-huskies.jpg';
+
+function displayImage() {
+  document.getElementById("imageBtn").blur();
+  var image = images[Math.floor(Math.random() * images.length)];
+  document.getElementById("body").style.backgroundImage = 'url("' + image + '")';
+//    document.getElementById("body").style.backgroundImage = 'url("http://www.muhiloosai.com/wp-content/uploads/2016/10/cute-husky-puppies-uhd-wallpaper.jpg")';
+}
+
+
+
 //Toggles game state to paused
 // function togglePause() {
 //     if (!paused)
@@ -53,9 +73,12 @@ context.scale(20, 20);
 // });
 
 
+
+
 // Music control
 var music = false;
 function musicToggle() {
+  document.getElementById("musicBtn").blur();
   music= !music
   if ( music == true) {
   	document.getElementById("musicBtn").value="Music on";
@@ -80,6 +103,7 @@ function saveScore() {
 
 //changes pause state of game
 function togglePause() {
+  document.getElementById("pauseBtn").blur();
   paused = !paused
   var x = document.getElementById("status");
   if (paused) {
@@ -367,6 +391,7 @@ function playerReset() {
     saveScore();
     player.score = 0;
     totalRows = 0;
+    gameLevel = 0;
     updateScore();
   }
 }

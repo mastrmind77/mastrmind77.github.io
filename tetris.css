@@ -10,7 +10,7 @@ body {
 
 canvas {
   border: solid .2em #fff;
-  height: 70vh;
+  height: 75vh;
 
 }
 
@@ -48,8 +48,9 @@ h1 {
   padding: 10px;
   width: 150px;
   font-variant: small-caps;
-   justify-content: space-evenly;
-   padding-left:70px;
+  font-size: 0.8em;
+  justify-content: space-evenly;
+  padding-left:70px;
 }
 
 

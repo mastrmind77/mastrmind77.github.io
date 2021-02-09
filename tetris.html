@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png" /> -->
-    
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide&effect=shadow-multiple">
     <link rel="stylesheet" href="tetris.css">
     <title>Tetris</title>
@@ -61,7 +61,7 @@ mc.on("panleft panright panup pandown tap press", function(ev) {
 </script> -->
 
   </head>
-  <body ontouchmove="BlockElasticScroll(event);">
+  <body ontouchmove="BlockElasticScroll(event);" id="body">
     <div id="score"></div>
     <br/>
   <!--  <div id="topScore">test</div> -->
@@ -85,8 +85,8 @@ mc.on("panleft panright panup pandown tap press", function(ev) {
         <div class="item13">K &#8595;</div>
         <div class="item14">Drop</div>
 
-        <div class="item15">&#9655;</div>
-        <div class="item16">Start Music</div>
+        <div class="item15">Space</div>
+        <div class="item16">Hard Drop</div>
       </div>
 
     </div>
@@ -123,8 +123,9 @@ mc.on("panleft panright panup pandown tap press", function(ev) {
 </center> -->
 
 <center>
-<input type="button" value="Music" id="musicBtn"onclick="musicToggle()"></input>
-<input type="button" value="Pause" id="pauseBtn"onclick="togglePause()"></input>
+<input type="button" value="Music" id="musicBtn" onclick="musicToggle()"></input>
+<input type="button" value="Pause" id="pauseBtn" onclick="togglePause()"></input>
+<input type="button" value="Good Luck" id="imageBtn" onclick="displayImage()"></input>
 
 </center>
 <!-- <button id="correct">Music</button> -->
