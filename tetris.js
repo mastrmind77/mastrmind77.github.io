@@ -7,16 +7,15 @@ var highScore = localStorage.getItem("highScore");
 var totalRows = 0;
 var moveScore = 0;
 
+context.scale(20, 20); //Sets display scale so a pixel is 20x20
 
-//const pauseKey : false;
-//const enterKey : false;
 
-context.scale(20, 20);
 
+//****************start Random Background easter egg******************//
 var images = [], x = -1;
       images[0] ='http://www.muhiloosai.com/wp-content/uploads/2016/10/cute-husky-puppies-uhd-wallpaper.jpg';
       images[1] ='https://weneedfun.com/wp-content/uploads/2016/12/Siberian-Husky-Puppies-18.jpg';
-      images[2] ='https://weneedfun.com/wp-content/uploads/2016/12/Siberian-Husky-Puppies-18.jpg';
+      images[2] ='https://weneedfun.com/wp-content/uploads/2016/12/Siberian-Husky-Puppies-24.jpg';
       images[3] ='https://gfp-2a3tnpzj.stackpathdns.com/wp-content/uploads/2018/05/four-siberian-husky-puppies-in-a-yard.jpg';
       images[4] ='https://pixfeeds.com/images/dogs/1280-590181290-malamute-puppies-lying-on-woolen-plaid.jpg';
       images[5] ='https://cdn0.wideopenpets.com/wp-content/uploads/2017/05/AdobeStock_107723771.jpeg';
@@ -28,49 +27,13 @@ function displayImage() {
   document.getElementById("imageBtn").blur();
   var image = images[Math.floor(Math.random() * images.length)];
   document.getElementById("body").style.backgroundImage = 'url("' + image + '")';
-//    document.getElementById("body").style.backgroundImage = 'url("http://www.muhiloosai.com/wp-content/uploads/2016/10/cute-husky-puppies-uhd-wallpaper.jpg")';
 }
+//**************** end Random Background easter egg******************//
 
 
 
-//Toggles game state to paused
-// function togglePause() {
-//     if (!paused)
-//     {
-//         paused = true;
-//     } else if (paused)
-//     {
-//        paused= false;
-//     }
-//
-// }
-
-// function loadScore() {
-//   if(localStorage.getItem(localStorageName) == null) {
-//     highScore = 0;
-//   } else {
-//     highScore = localStorage.getItem(localStorageName);
-//   }
-// }
 
 
-//var score = 0;
-//var highscore = localStorage.getItem("highscore");
-
-
-// Get a reference to an element.
-// var square = document.querySelector('score');
-//
-// // Create an instance of Hammer with the reference.
-// var hammer = new Hammer(square);
-//
-// // Subscribe to a quick start event: press, tap, or doubletap.
-// // For a full list of quick start events, read the documentation.
-// hammer.on('press', function(e) {
-//   e.target.classList.toggle('expand');
-//   console.log("You're pressing me!");
-//   console.log(e);
-// });
 
 
 
@@ -130,45 +93,12 @@ function startGame() {
 }
 
 
-// const song = document.getElementById('themeSong');
-//
-// function playAudio() {
-//   song.play();
-// }
-//
-// function pauseAudio() {
-//   song.pause();
-// }
-
-
-// var audioElement = document.createElement('audio');
-// audioElement.setAttribute('src', 'https://ia800504.us.archive.org/33/items/TetrisThemeMusic/Tetris.ogg');
-//
-// function PlayAudio()
-// {
-//
-// 	audioElement.load;
-// 	audioElement.play();
-//
-// }
-//
-// function PauseAudio()
-// {
-// 	audioElement.pause();
-// }
-
-
-//const mySound = document.getElementById("themeSong");
-//const correctButton = document.getElementById("correct");
-//correctButton.addEventListener("click", function(){ mySound.play(); });
 
 
 
 
-// function pauseGame() {
-//     paused = !paused; // toggle the paused value (false <-> true)
-//     if (!paused) loop(); // restart loop
-// }
+
+
 
 //Clears lines as they are completed
 function arenaSweep() {
@@ -190,12 +120,8 @@ function arenaSweep() {
 
     levelUp();
 
-    //if (movescore =1) {
-    //  totalRows = totalRows + 1;
-    //}
 
     player.score += rowCount * 10;
-    //totalRows = totalRows + rowCount;
     rowCount *= 2;
   }
   updateScore();
@@ -228,6 +154,7 @@ function createMatrix(w, h){
 
 //piece layout
 function createPiece(type) {
+// document.getElementById('nextblock').innerText = type
   if (type === 'T') {
     return [
       [0,0,0],
@@ -280,7 +207,6 @@ function draw() {
 
   drawMatrix(arena, {x:0, y:0})
   drawMatrix(player.matrix, player.pos);
-  //document.getElementById('themeSong').play();
 
 }
 
@@ -382,6 +308,8 @@ function playerReset() {
   // player.matrix = currentPiece;
 
   player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
+
+//  document.getElementById('nextblock').innerText = type
 
   player.pos.y = 0;
   player.pos.x = (arena[0].length / 2 | 0) -
