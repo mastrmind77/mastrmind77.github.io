@@ -8,11 +8,46 @@ body {
   background-size: cover;
 }
 
-canvas {
-  border: solid .2em #fff;
-  height: 85vh;
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: flex-start;
 }
 
+#tetris {
+  border: solid .2em #fff;
+height: 79vh;
+}
+
+
+#leftside {
+  width: 40px;
+  background: gray;
+  display: none;
+  height: 80vh;
+}
+
+#touchy {
+  border: solid .2em #fff;
+  height: 80vh;
+}
+
+#rightside {
+  width: 60px;
+  background: black;
+  border: solid .2em #fff;
+  height: 80vh;
+  font-variant: small-caps;
+}
+
+.title {
+  background: gray;
+  color: black;
+  font-size: .8em;
+}
 
 /* Tetris Title */
 h1 {

@@ -40,37 +40,60 @@
 
   </head>
   <body ontouchmove="BlockElasticScroll(event);" id="body">
-    <div id="score"></div>
+
     <br/>
   <!--  <div id="topScore">test</div> -->
-    <div id="status">
-      <h1 class="font-effect-shadow-multiple">Tetris<br/></h1>
 
-      <div class="grid-container">
-        <div class="item1">P</div>
-        <div class="item2">Play/Pause</div>
-        <div class="item3">Esc</div>
-        <div class="item4">End Game</div>
-        <div class="item5">J &#8592;</div>
-        <div class="item6">Left</div>
-        <div class="item7">L &#8594;</div>
-        <div class="item8">Right</div>
-        <div class="item9">Q</div>
-        <div class="item10">Rotate Left</div>
-        <div class="item11">I W &#8593;</div>
-        <div class="item12">Rotate Right</div>
-        <div class="item13">K &#8595;</div>
-        <div class="item14">Drop</div>
 
-        <div class="item15">Space</div>
-        <div class="item16">Hard Drop</div>
-      </div>
 
+<div class="flex-container">
+    <div id="leftside">
+    left
     </div>
-
 <div id="touchy">
     <canvas id="tetris" width="240" height="400">
     </canvas>
+</div>
+<div id="rightside">
+    <div class="title">next</div>
+    <div>
+      <canvas id="next" width="40" height="40">
+      </canvas>
+    </div>
+    <div class="title">score</div>
+    <div id="score"></div>
+    <div class="title">rows</div>
+    <div id="rows"></div>
+    <div class="title">level</div>
+    <div id="level"></div>
+    <div class="title">high</div>
+    <div id="highscore"></div>
+
+    </div>
+</div>
+
+<div id="status">
+  <h1 class="font-effect-shadow-multiple">Tetris<br/></h1>
+
+  <div class="grid-container">
+    <div class="item1">P</div>
+    <div class="item2">Play/Pause</div>
+    <div class="item3">Esc</div>
+    <div class="item4">End Game</div>
+    <div class="item5">J &#8592;</div>
+    <div class="item6">Left</div>
+    <div class="item7">L &#8594;</div>
+    <div class="item8">Right</div>
+    <div class="item9">Q</div>
+    <div class="item10">Rotate Left</div>
+    <div class="item11">I W &#8593;</div>
+    <div class="item12">Rotate Right</div>
+    <div class="item13">K &#8595;</div>
+    <div class="item14">Drop</div>
+
+    <div class="item15">Space</div>
+    <div class="item16">Hard Drop</div>
+  </div>
 </div>
     <script src="tetris.js"></script>
 

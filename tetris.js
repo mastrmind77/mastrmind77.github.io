@@ -2,13 +2,17 @@ const canvas = document.getElementById("tetris");
 const context = canvas.getContext("2d");
 var paused = true;
 
+const nextCanvas = document.getElementById("next");
+const nextContext = nextCanvas.getContext("2d");
+
+
 var localStorageName = "TetrisTopScore";
 var highScore = localStorage.getItem("highScore");
 var totalRows = 0;
 var moveScore = 0;
 
 context.scale(20, 20); //Sets display scale so a pixel is 20x20
-
+nextContext.scale(8, 8);
 
 //****************start Random Background easter egg******************//
 var images = [], x = -1;
@@ -199,18 +203,30 @@ function createPiece(type) {
   }
 }
 
+
+function drawNext(){
+  nextContext.fillStyle = '#000';
+  nextContext.fillRect(0, 0, nextCanvas.width, nextCanvas.height);
+
+  drawMatrix(nextArena, {x: 0, y:0}, nextContext);
+  drawMatrix(player.next, {x: 1, y: 1}, nextContext);
+}
+
+
+
+
 //clears old position and draws new piece position and draws the board
 function draw() {
   context.fillStyle = '#000';
   context.fillRect(0,0,canvas.width, canvas.height);
 
-  drawMatrix(arena, {x:0, y:0})
-  drawMatrix(player.matrix, player.pos);
+  drawMatrix(arena, {x:0, y:0}, context)
+  drawMatrix(player.matrix, player.pos, context);
 
 }
 
 //function that draws pieces on screen
-function drawMatrix(matrix, offset){
+function drawMatrix(matrix, offset, context){
   matrix.forEach((row, y) => {
     row.forEach((value, x) => {
       if (value !== 0) {
@@ -306,7 +322,17 @@ function playerReset() {
   // nextPiece = createPiece(pieces[pieces.length * Math.random() | 0]);
   // player.matrix = currentPiece;
 
-  player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
+  //player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
+
+  if(player.next === null){
+    player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
+    player.next = createPiece(pieces[pieces.length * Math.random() | 0]);
+  } else {
+    player.matrix = player.next;
+    player.next = createPiece(pieces[pieces.length * Math.random() | 0]);
+  }
+
+  drawNext();
 
 //  document.getElementById('nextblock').innerText = type
 
@@ -380,7 +406,13 @@ function update(time = 0){
 //Updates the score in the HTML
 function updateScore() {
 
-  document.getElementById('score').innerText = "score: " + player.score + " | rows: " + totalRows  + " | high:"+ highScore + " | level:" + gameLevel;
+  document.getElementById('score').innerText = player.score;
+  document.getElementById('rows').innerText = totalRows;
+  document.getElementById('level').innerText = gameLevel;
+  document.getElementById('highscore').innerText = highScore;
+
+
+  // + "<br>rows: " + totalRows  + "<br>high:"+ highScore + "<br>level:" + gameLevel;
   //document.getElementById('topScore').innerText = highScore;
 }
 
@@ -397,17 +429,19 @@ const colors = [
 ];
 
 const arena = createMatrix(12, 20); //defines size of board
+const nextArena = createMatrix(6, 6); // defines next piece window
 
 //this is the current piece
 const player = {
   pos: {x: 0, y: 0},
   matrix: null,
   score: 0,
-}
+  next: null,
+};
 
-const nextPiece = {
-  matrix: null,
-}
+// const nextPiece = {
+//   matrix: null,
+// }
 
 // const currentPiece = {
 //   matrix: createPiece(pieces[pieces.length * Math.random() | 0]),
