@@ -19,7 +19,7 @@ body {
 
 #tetris {
   border: solid .2em #fff;
-height: 79vh;
+height: 70vh;
 }
 
 
@@ -27,19 +27,19 @@ height: 79vh;
   width: 40px;
   background: gray;
   display: none;
-  height: 80vh;
+  height: 70vh;
 }
 
 #touchy {
   border: solid .2em #fff;
-  height: 80vh;
+  height: 70vh;
 }
 
 #rightside {
   width: 60px;
   background: black;
   border: solid .2em #fff;
-  height: 80vh;
+  height: 70vh;
   font-variant: small-caps;
 }
 
