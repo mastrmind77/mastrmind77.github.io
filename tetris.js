@@ -11,6 +11,12 @@ var highScore = localStorage.getItem("highScore");
 var totalRows = 0;
 var moveScore = 0;
 
+var timeStart = 0;
+var timeEnd = 0;
+var timeGame = 0;
+
+var pieceCount = 0;
+
 context.scale(20, 20); //Sets display scale so a pixel is 20x20
 nextContext.scale(8, 8);
 
@@ -33,8 +39,13 @@ function displayImage() {
 }
 //**************** end Random Background easter egg******************//
 
+//Game State
+//    0 - New game
+//    1 - Playing
+//    2 - Paused
+//    3 - Game Over
 
-
+var gameState = 0
 
 
 
@@ -68,31 +79,88 @@ function saveScore() {
 }
 
 //changes pause state of game
-function togglePause() {
+function pauseGame() {
+
   document.getElementById("pauseBtn").blur();
-  paused = !paused
-  var x = document.getElementById("status");
-  if (paused) {
-    x.style.display = "block";
-    document.getElementById( 'playmusic' ).pause();
+  var x = document.getElementById("pause");
+  var z = document.getElementById("gameOver");
+  paused = !paused;
+
+  if (collide(arena, player)) {
+          gameState = 3;
+          z.style.display = "block";
+          gameTimer();
+          document.getElementById("newGameBtn").blur();
+          document.getElementById( 'playmusic' ).pause();
+
+
+          document.getElementById('scoreGO').innerText = player.score;
+          document.getElementById('rowsGO').innerText = totalRows;
+          document.getElementById('levelGO').innerText = gameLevel;
+          document.getElementById('pieces').innerText = pieceCount;
+          document.getElementById('time').innerText = timeGame;
+          document.getElementById('highscoreGO').innerText = highScore;
+
+
+
+          //arena.forEach(row => row.fill(0));
+          saveScore();
+          updateScore();
+          paused = true;
+
+    } else if (paused) {
+      gameState = 2;
+        x.style.display = "block";
+        document.getElementById( 'playmusic' ).pause();
+        //paused = true;
+
     //pauseAudio();
-  } else {
-    x.style.display = "none";
-    //mySound.play();
-    //playAudio();
+
+
+
+
+    } else {
+        x.style.display = "none";
+        gameState = 1;
+
+        //mySound.play();
+        //playAudio();
 
   }
     update();
 }
 
+
+document.getElementById('newGameBtn').addEventListener('keypress', function(event) {
+        if (event.keyCode == 32) {
+            event.preventDefault();
+        }
+    });
+
+
+
 function startGame() {
+  paused = false;
+  gameState = 1;
+  document.getElementById("gameOver").blur();
+  document.getElementById("newGame").style.display = "none";
+  document.getElementById("gameOver").style.display = "none";
+  document.getElementById("pause").style.display = "none";
   arena.forEach(row => row.fill(0));
-  saveScore();
   player.score = 0;
+  totalRows = 0;
+  gameLevel = 1;
+    updateScore();
+  saveScore();
+  timeStart = Math.round(new Date().getTime()/1000);
+  pieceCount = 0;
   //paused = false;
-  togglePause();
+  //pauseGame();
   playerReset();
-  playAudio();
+  //playAudio();
+  update();
+  document.addEventListener('keydown', keyListener);
+  document.addEventListener('keyup', keyListener);
 }
 
 
@@ -223,6 +291,7 @@ function draw() {
   drawMatrix(arena, {x:0, y:0}, context)
   drawMatrix(player.matrix, player.pos, context);
 
+
 }
 
 //function that draws pieces on screen
@@ -318,6 +387,7 @@ function playerMove(dir) {
 //creates a random piece at the top middle of the board
 function playerReset() {
   const pieces = 'ILJOTSZ';
+  pieceCount++;
   // var currentPiece = nextPiece;
   // nextPiece = createPiece(pieces[pieces.length * Math.random() | 0]);
   // player.matrix = currentPiece;
@@ -332,6 +402,7 @@ function playerReset() {
     player.next = createPiece(pieces[pieces.length * Math.random() | 0]);
   }
 
+
   drawNext();
 
 //  document.getElementById('nextblock').innerText = type
@@ -339,15 +410,26 @@ function playerReset() {
   player.pos.y = 0;
   player.pos.x = (arena[0].length / 2 | 0) -
                  (player.matrix[0].length / 2 | 0);
+
+
   if (collide(arena, player)) {
-    arena.forEach(row => row.fill(0));
-    saveScore();
-    player.score = 0;
-    totalRows = 0;
-    gameLevel = 1;
-    updateScore();
+    //gameState = 3;
+    pauseGame();
+    timeEnd = Math.round(new Date().getTime()/1000)
+    document.removeEventListener('keydown', keyListener);
+    document.removeEventListener('keyup', keyListener);
+    }
   }
-}
+
+  // if (collide(arena, player)) {
+  //   arena.forEach(row => row.fill(0));
+  //   saveScore();
+  //   player.score = 0;
+  //   totalRows = 0;
+  //   gameLevel = 1;
+  //   updateScore();
+  // }
+
 
 //Performs the piece rotation
 function playerRotate(dir) {
@@ -394,7 +476,8 @@ function update(time = 0){
         playerDrop();
     }
     draw();
-    if (!paused) {
+    if (!paused && gameState == 1) {
+    //if (gameState = 1) {
       if (music == true) {
         document.getElementById( 'playmusic' ).play();
       }
@@ -439,6 +522,33 @@ const player = {
   next: null,
 };
 
+
+
+
+function gameTimer() {
+// get total seconds between the times
+//var delta = Math.abs(timeEnd - timeStart);
+var delta = timeEnd - timeStart;
+//calculate (and subtract) whole days
+var days = Math.floor(delta / 86400);
+delta -= days * 86400;
+
+//calculate (and subtract) whole hours
+var hours = Math.floor(delta / 3600) % 24;
+delta -= hours * 3600;
+
+//calculate (and subtract) whole minutes
+var minutes = Math.floor(delta / 60) % 60;
+delta -= minutes * 60;
+
+// what's left is seconds
+var seconds = delta % 60;  // in theory the modulus is not required
+timeGame = minutes + ':' + seconds
+
+// timeGame = delta
+}
+
+
 // const nextPiece = {
 //   matrix: null,
 // }
@@ -448,7 +558,10 @@ const player = {
 // }
 
 //player controls
-document.addEventListener('keydown', event => {
+
+//document.addEventListener('keydown', event => {
+function keyListener(event) {
+  if (event.type === 'keydown') {
   if (event.keyCode === 37 || event.keyCode === 74) {
     playerMove(-1); //left arrow or J
   } else if (event.keyCode === 39 || event.keyCode === 76) {
@@ -460,7 +573,8 @@ document.addEventListener('keydown', event => {
   } else if (event.keyCode === 87 || event.keyCode === 73) {
       playerRotate(1); // W to rotate Right or I
   } else if (event.keyCode === 80) {
-      togglePause(); //Press P to pause
+      //paused = true;
+      pauseGame(); //Press P to pause
   } else if (event.keyCode === 32) {
       hardDrop(); //Press Space to hard drop
   } else if (event.keyCode === 27) {
@@ -470,7 +584,8 @@ document.addEventListener('keydown', event => {
   } else if (event.keyCode === 84) {
       musicToggle(); //Press t to toggle music
   }
-});
+}
+}
 
 
 //Touch controls
@@ -524,7 +639,7 @@ mc.get('tap').set({ enable: true });
     }else if (ev.type === "tap") {
         playerRotate(1); // W to rotate Right or I
     } else if (ev.type === "press") {
-        togglePause(); //Press P to pause
+        pauseGame(); //Press P to pause
     }
 
     // if (ev.type === 'panend' && ev.velocityX < -0.3 && ev.distance > 10) {
@@ -536,7 +651,7 @@ mc.get('tap').set({ enable: true });
     // } else if (ev.type === 'panend' && ev.velocityY > 0.3 && ev.distance > 10) {
     //     playerRotate(1);// Swipe up
     // } else if (ev.type === "press") {
-    //      togglePause(); //Press P to pause
+    //      pauseGame(); //Press P to pause
     // } else if (ev.type === "tap") {
     //     playerRotate(1); // W to rotate Right or I
     // }

@@ -4,8 +4,14 @@ body {
   font-family: sans-serif;
   font-size: 1em;
   text-align: center;
-  background-image: url("http://4.bp.blogspot.com/-wKEAyn1Hqfo/UTazxFqehjI/AAAAAAAAilo/ErAfKhBGGrc/s1600/Abstract+Wallpapers+(11).jpg");
+  background-image: url("https://raw.githubusercontent.com/mastrmind77/mastrmind77.github.io/master/background.jpg");
   background-size: cover;
+}
+
+button#newGameBtn:focus {
+  /* pointer-events: none; */
+  /* display: block; */
+   outline: none;
 }
 
 .flex-container {
@@ -59,7 +65,28 @@ h1 {
 }
 
 /*Pause Screen pop up */
-#status {
+#pause {
+  position: absolute;
+  width: 300px;
+  height: 370px;
+  z-index: 15;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  background: red;
+   display: none;
+}
+
+#newgame {
+  display: block;
+}
+
+#gameOver {
+  display: none;
+}
+
+/*Pause Screen pop up */
+.popup {
   position: absolute;
   width: 300px;
   height: 370px;
@@ -105,3 +132,25 @@ h1 {
  .item3, .item4 {
     margin-bottom: 10px;
 }
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 50%; /* Full width */
+  height: 50%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  border: solid .05em white;
+}
+
+/* .modal-content {
+    background: $darkBlue;
+} */
