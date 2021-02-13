@@ -102,6 +102,24 @@
 <div id="newGame" class="popup">
     <div class="modal-content">
       <h1 class="font-effect-shadow-multiple">Tetris<br/></h1>
+      <div class="grid-container">
+        <div class="item1">P</div>
+        <div class="item2">Play/Pause</div>
+        <div class="item3">Esc</div>
+        <div class="item4">End Game</div>
+        <div class="item5">J &#8592;</div>
+        <div class="item6">Left</div>
+        <div class="item7">L &#8594;</div>
+        <div class="item8">Right</div>
+        <div class="item9">Q</div>
+        <div class="item10">Rotate Left</div>
+        <div class="item11">I W &#8593;</div>
+        <div class="item12">Rotate Right</div>
+        <div class="item13">K &#8595;</div>
+        <div class="item14">Drop</div>
+        <div class="item15">Space</div>
+        <div class="item16">Hard Drop</div>
+      </div>
       <button onclick="startGame()" id="newGameBtn" style="width:250px">New Game</button>
       </div>
     </div>
@@ -122,6 +140,8 @@
             <div class="item10" id="time"></div>
             <div class="item11">High</div>
             <div class="item12" id="highscoreGO"></div>
+            <div class="item13">Gms playd</div>
+            <div class="item14" id="gamesPlayed"></div>
           </div>
           <br><br>
       <br>
@@ -148,9 +168,11 @@
 </center>
 
 
-
-
+    <script src="logic.js"></script>
+    <script src="controls.js"></script>
+    <script src="time.js"></script>
     <script src="tetris.js"></script>
+
 
 
     <script>
@@ -211,9 +233,9 @@
     document.onkeydown = focusor;
     document.onclick = focusor;
 </script>
-<div style="width: 0px; height: 0px; overflow: hiddden;">
+<!-- <div style="width: 0px; height: 0px; overflow: hiddden;">
     <button id="focus2"></button>
-</div>
+</div> -->
 
 <!-- <button id="correct">Music</button> -->
   </body>
