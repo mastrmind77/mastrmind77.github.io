@@ -47,7 +47,7 @@ var task = ["clean kitchen",
             "completed load of laundry",
             "vaccuumed rug",
             "clean dishwasher",
-            "clean table"
+            "clean table",
             "trip to the garbage"];
 
 let randomSentence = sentence[Math.floor(Math.random() * sentence.length)];
