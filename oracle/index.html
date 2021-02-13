@@ -7,6 +7,19 @@
     height: 100vh;
     width: 100vw;
   }
+
+  .popup {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    background: red;
+    color: limegreen;
+    display: block;
+  }
 </style>
 
     <meta charset="utf-8">
@@ -17,7 +30,15 @@
 <!-- <center><h1>Ask the Oracle your fate:<h1></center> -->
 <canvas width="500" height="200" id="canv" />
 
-<audio id="clearsound" src="https://raw.githubusercontent.com/dionyziz/canvas-tetris/master/sound/pop.ogg" preload="auto"></audio>
+<div class="popup" id="question">
+Ask the Oracle your fate:
+<input type="button" id="askBtn" onclick="musicToggle()"></input>
+</div>
+
+<!-- <div class="popup" id="answer"></div> -->
+
+
+<audio id="thinking" src="https://raw.githubusercontent.com/mastrmind77/mastrmind77.github.io/master/oracle/matrix.mp3" preload="auto"></audio>
 
 
 <script src="script.js"></script>

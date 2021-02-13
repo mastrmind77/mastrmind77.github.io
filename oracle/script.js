@@ -32,15 +32,19 @@ const ypos = Array(cols).fill(0);
 var i = 0;
 do {
   window.alert("Ask the Oracle your fate:");
+  //document.getElementById("question").style.display = "block";
+  //document.getElementById( "askBtn" ).onmousedown = playMusic();
   i++;
 }
 while (i<1);
 
+//list of sentence starters
 var sentence = ["Your path to enlightenment is through a ",
                 "I see in your future a ",
                 "Your future self is pleased by a ",
                 "Hard work is reward enough with a "];
 
+//list of tasks
 var task = ["clean kitchen",
             "clean litterbox",
             "clean bathroom",
@@ -50,14 +54,22 @@ var task = ["clean kitchen",
             "clean table",
             "trip to the garbage"];
 
+//create the random task
 let randomSentence = sentence[Math.floor(Math.random() * sentence.length)];
 let randomTask = task[Math.floor(Math.random() * task.length)];
 let result = randomSentence + randomTask
 
 var runCount = 0;
 
-function matrix () {
 
+
+// function playMusic() {
+//   document.getElementById( 'thinking' ).play();
+// }
+
+
+//Runs the matrix code
+function matrix () {
   runCount++;
   // Draw a semitransparent black rectangle on top of previous drawing
   ctx.fillStyle = '#0001';
@@ -89,4 +101,8 @@ function matrix () {
 }
 
 // render the animation at 20 FPS.
-setInterval(matrix, 50);
+//function run(){
+  //document.getElementById("question").style.display = "none";
+  setInterval(matrix, 50);
+  //playMusic();
+//}
