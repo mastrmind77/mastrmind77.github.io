@@ -11,6 +11,8 @@ body {
   font-family: 'Open Sans', 'sans-serif';
   background-color: #fff;
   color: #444;
+  width: 80vw;
+
 }
 
 img {
@@ -26,6 +28,7 @@ p {
   margin-bottom: 2em;
   border: 2px solid #444;
   padding: 10px;
+  margin-left: 20%;
 }
 
 .media > .title { grid-area: title; }
@@ -100,7 +103,7 @@ p {
     .media {
       display: grid;
       grid-column-gap: 20px;
-      grid-template-columns: 150px 3fr;
+      grid-template-columns: 800px 2fr;
       grid-template-rows: auto 1fr auto;
       grid-template-areas:
         "img title"
