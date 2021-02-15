@@ -163,6 +163,51 @@ var jsonMedical = `{
       "category_id": 105,
       "game_id": null,
       "invalid_count": null
+    },{
+      "id": 6018,
+      "answer": "Amino acids",
+      "question": "Often referred as the building blocks of the body",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6019,
+      "answer": "Opossum",
+      "question": "This animal is the primary host of Equine Protozoal Myeloencephalitis",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6020,
+      "answer": "Parrot mouth",
+      "question": "Term for a horse that has an extreme overbite",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6021,
+      "answer": "Gray",
+      "question": "A tumor of pigment forming cells called a melanoma is most common in this color horse",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6022,
+      "answer": "Swayback",
+      "question": "A concave or sagging back indicative of weakness in the back",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
     }
   ]
 }`;

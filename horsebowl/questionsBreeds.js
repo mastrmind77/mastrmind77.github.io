@@ -118,6 +118,33 @@ var jsonBreeds = `{
     "category_id": 101,
     "game_id": null,
     "invalid_count": null
+  },{
+    "id": 2013,
+    "answer": "Chickasaw",
+    "question": "Breed developed by the East Coast Indians",
+    "value": 100,
+    "airdate": null,
+    "category_id": 101,
+    "game_id": null,
+    "invalid_count": null
+  },{
+    "id": 2014,
+    "answer": "Mule",
+    "question": "The infertile hybrid offspring of a mare and a jack",
+    "value": 100,
+    "airdate": null,
+    "category_id": 101,
+    "game_id": null,
+    "invalid_count": null
+  },{
+    "id": 2015,
+    "answer": "Arabian",
+    "question": "This breed known for their refined heads, flat croups, arching necks & use as endurance horses",
+    "value": 100,
+    "airdate": null,
+    "category_id": 101,
+    "game_id": null,
+    "invalid_count": null
   }
 ]
 }`;

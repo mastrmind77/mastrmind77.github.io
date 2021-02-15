@@ -109,6 +109,15 @@ var jsonMovement = `{
       "category_id": 106,
       "game_id": null,
       "invalid_count": null
+    },{
+      "id": 7012,
+      "answer": "Natural",
+      "question": "Term that refers to a gait that the horse performs by natural impulses and does not require training",
+      "value": 100,
+      "airdate": null,
+      "category_id": 106,
+      "game_id": null,
+      "invalid_count": null
     }
   ]
 }`;

@@ -163,6 +163,51 @@ var jsonColor = `{
       "category_id": 102,
       "game_id": null,
       "invalid_count": null
+    },{
+      "id": 3018,
+      "answer": "Chestnut",
+      "question": "This color hair mixes with white hairs in a strawberry roan",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3019,
+      "answer": "5",
+      "question": "The number of basic horse coat colors",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3020,
+      "answer": "Dilution",
+      "question": "A lessening of the intensity of the basic color hair",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3021,
+      "answer": "Star",
+      "question": "A common horse marking. It is white hair found in a small area on the horse’s forehead area",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3022,
+      "answer": "Gray",
+      "question": "Dominant coat color of the Lipizzan breed",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
     }
 
   ]

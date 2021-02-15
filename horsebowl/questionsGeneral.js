@@ -407,6 +407,114 @@ var jsonGeneral = `{
 				"category_id": 100,
 				"game_id": null,
 				"invalid_count": null
+			},{
+				"id": 1045,
+				"answer": "50",
+				"question": "The number of pounds of manure a 1000 pound horse produce per day",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1046,
+				"answer": "Phenotype",
+				"question": "Proper genetic term for the outward appearance of the horse",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1047,
+				"answer": "350",
+				"question": "The number of degree of sight a horse has",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1048,
+				"answer": "Withers",
+				"question": "The fork of a Western saddle fits over this part of the horse",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1049,
+				"answer": "Hoof pick",
+				"question": "Piece of equipment used to clean a horse foot",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1050,
+				"answer": "Pony",
+				"question": "An equine that stands less than 14.2 hands tall",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1051,
+				"answer": "Imprinting",
+				"question": "Term that describes the rapid learning that occurs with a foal within the first several hours after birth",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1052,
+				"answer": "Preakness",
+				"question": "The second race in the Triple Crown for 3 year old Thoroughbreds",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1053,
+				"answer": "Aids",
+				"question": "The general term for signals or cues used by the rider to communicate to the horse",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1054,
+				"answer": "Barn sour",
+				"question": "Term to describe a horse that does not want to leave the barn because it feels safer within the barne",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1055,
+				"answer": "Tack",
+				"question": "Term to describe equipment for horses",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1056,
+				"answer": "Binocular",
+				"question": "Type of vision a horse uses to judge distances",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
 			}
 		]
 }`;
