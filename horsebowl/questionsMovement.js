@@ -30,7 +30,7 @@ var jsonMovement = `{
       "invalid_count": null
     },{
       "id": 7003,
-      "answer": "1",
+      "answer": "4",
       "question": "The number of beats in a walk",
       "value": 100,
       "airdate": null,
@@ -68,6 +68,24 @@ var jsonMovement = `{
       "id": 7007,
       "answer": "Cadence",
       "question": "Judging term refers to the ability of the horse to maintain a correct and distinct foot fall pattern",
+      "value": 100,
+      "airdate": null,
+      "category_id": 106,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 7008,
+      "answer": "Jog",
+      "question": "The term for the slow, smooth, trot of a western horse",
+      "value": 100,
+      "airdate": null,
+      "category_id": 106,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 7009,
+      "answer": "Walk",
+      "question": "The slowest gait of a horse",
       "value": 100,
       "airdate": null,
       "category_id": 106,

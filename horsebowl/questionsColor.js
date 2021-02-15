@@ -64,6 +64,106 @@ var jsonColor = `{
       "category_id": 102,
       "game_id": null,
       "invalid_count": null
+    },{
+      "id": 3007,
+      "answer": "Roan",
+      "question": "Term for the coat color in which white hairs and colored hairs are an even mixture and do not change over time",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3008,
+      "answer": "Pink",
+      "question": "The skin color of a true white horse",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3009,
+      "answer": "Dorsal stripe",
+      "question": "The name of the marking down the center of the back of a dun colored horse",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3010,
+      "answer": "Rust",
+      "question": "A perlino colored horse has this color points",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3011,
+      "answer": "Palomino",
+      "question": "The color horse you get when you cross a chestnut colored horse and a cremello colored horse",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3012,
+      "answer": "Melanin",
+      "question": "This pigment controls the color of the horses skin and hair",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3013,
+      "answer": "Blue roan",
+      "question": "The roan-colored horse in which black the base color",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3014,
+      "answer": "Chestnut",
+      "question": "Cremello is a double dilution of this color",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3015,
+      "answer": "Flaxen",
+      "question": "The term for the mane and tail of the chestnut colored horse being very light in color",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3016,
+      "answer": "Bay",
+      "question": "Perlino is a result of the double dilution of this color",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 3017,
+      "answer": "Chestnut",
+      "question": "The base coat color of the strawberry roan colored horse",
+      "value": 100,
+      "airdate": null,
+      "category_id": 102,
+      "game_id": null,
+      "invalid_count": null
     }
+
   ]
 }`;

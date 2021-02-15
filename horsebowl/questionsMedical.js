@@ -55,6 +55,114 @@ var jsonMedical = `{
       "category_id": 105,
       "game_id": null,
       "invalid_count": null
+    },{
+      "id": 6006,
+      "answer": "Vitamin D",
+      "question": "Vitamin that is obtained by most horses through sunshine and sun-cured hay",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6007,
+      "answer": "Pigeon toed",
+      "question": "Term for the conformational defect in which the hoofs of the front legs of the horse point in rather than straight ahead",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6008,
+      "answer": "Vitamin D",
+      "question": "Rickets occurs only in young animals and can be caused by a deficiency of this vitamin",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6009,
+      "answer": "Iron",
+      "question": "Deficiency of this trace mineral can cause anemia",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6010,
+      "answer": "Antidote",
+      "question": "The remedy to counteract a poison",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6011,
+      "answer": "Calcium",
+      "question": "The mineral that is the partner to phosphorus and is important for healthy bones and teeth",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6012,
+      "answer": "Paint",
+      "question": "Lethal white foal syndrome is associated with this breed of horse",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6013,
+      "answer": "Vitamin A",
+      "question": "This fat-soluble vitamin is needed for vision",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6014,
+      "answer": "Protein",
+      "question": "Soybean meal and canola meal are the best sources of this type of basic nutrient",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6015,
+      "answer": "Thrush",
+      "question": "The infection of the frog area of the foot caused by anaerobic microorganisms and has a foul, blackish discharge",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6016,
+      "answer": "Overfeeding",
+      "question": "In the United States, nutritional problems in horses are more likely associated with which of these – overfeeding or underfeeding?",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 6017,
+      "answer": "Iodine",
+      "question": "Deficiency of this trace mineral may cause a goiter",
+      "value": 100,
+      "airdate": null,
+      "category_id": 105,
+      "game_id": null,
+      "invalid_count": null
     }
   ]
 }`;

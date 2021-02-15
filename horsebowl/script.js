@@ -81,11 +81,14 @@ let dataDevelopment = JSON.parse(jsonDevelopment);
 const categories = [dataGeneral, dataMovement, dataMedical, dataAnatomy,
                     dataBreeds, dataColor, dataDevelopment];
 
+      //categories = shuffle(categories);
+
       //Sift through the data when all categories come back
         // Promise.all(categories).then(results => {
 
          //Build up our list of categories
          categories.forEach((result, categoryIndex) => {
+           //categories = shuffle(result.categories).foreach((result, categoryIndex) => {
            console.log(categories)
 
             //Start with a blank category

@@ -281,6 +281,87 @@ var jsonGeneral = `{
 				"category_id": 100,
 				"game_id": null,
 				"invalid_count": null
+			},{
+				"id": 1031,
+				"answer": "Shank",
+				"question": "In reference to western bits, it is the name for the portion of the cheek of the bit from the mouthpiece down to the reins?",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1032,
+				"answer": "Pecking order",
+				"question": "The common name for the dominance hierarchy or social order exhibited by a group of horses",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1033,
+				"answer": "Dominant",
+				"question": "The term for the horse at the top of the pecking order",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1034,
+				"answer": "Bobtail",
+				"question": "The term for a horse with a short or docked tail",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1035,
+				"answer": "70",
+				"question": "The percent of of water that makes up horses total body weight",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1036,
+				"answer": "Unicorn hitch",
+				"question": "Name for a hitch with two horses hitched as a pair and a third horse hitched in front of them",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1037,
+				"answer": "Kentucky Derby",
+				"question": "The Triple Crown is a series of Thoroughbred races. This the first race of the series",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1038,
+				"answer": "Big Red",
+				"question": "Man of War and Secretariat were famous Thoroughbred race horses that were the same color and had the same nickname. What was the nickname?",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1039,
+				"answer": "Draft",
+				"question": "This type of horse were used the most to farm the land and move goods to the population centers",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
 			}
 		]
 }`;

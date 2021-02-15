@@ -64,6 +64,33 @@ var jsonDevelopment = `{
       "category_id": 103,
       "game_id": null,
       "invalid_count": null
+    },{
+      "id": 4007,
+      "answer": "Colt",
+      "question": "A male horse under 3 years of age",
+      "value": 100,
+      "airdate": null,
+      "category_id": 103,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 4008,
+      "answer": "Foal",
+      "question": "A horse of either sex less than one year of age",
+      "value": 100,
+      "airdate": null,
+      "category_id": 103,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 4009,
+      "answer": "Yearling",
+      "question": "a horse of either sex between the ages of one and two",
+      "value": 100,
+      "airdate": null,
+      "category_id": 103,
+      "game_id": null,
+      "invalid_count": null
     }
   ]
 }`;

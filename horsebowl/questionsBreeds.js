@@ -64,6 +64,60 @@ var jsonBreeds = `{
     "category_id": 101,
     "game_id": null,
     "invalid_count": null
+  },{
+    "id": 2007,
+    "answer": "England",
+    "question": "The history of the Thoroughbred horse began in this country",
+    "value": 100,
+    "airdate": null,
+    "category_id": 101,
+    "game_id": null,
+    "invalid_count": null
+  },{
+    "id": 2008,
+    "answer": "American Saddlebred",
+    "question": "This current breed of horse is called the peacock of the horse world",
+    "value": 100,
+    "airdate": null,
+    "category_id": 101,
+    "game_id": null,
+    "invalid_count": null
+  },{
+    "id": 2009,
+    "answer": "Tennessee walking horse",
+    "question": "The American Walking pony is a result of breeding the Welsh Pony and this breed",
+    "value": 100,
+    "airdate": null,
+    "category_id": 101,
+    "game_id": null,
+    "invalid_count": null
+  },{
+    "id": 2010,
+    "answer": "hinny",
+    "question": "The result of breeding a Stallion and a female donkey",
+    "value": 100,
+    "airdate": null,
+    "category_id": 101,
+    "game_id": null,
+    "invalid_count": null
+  },{
+    "id": 2011,
+    "answer": "Arabian",
+    "question": "The Thoroughbred was developed largely from this breed of horse",
+    "value": 100,
+    "airdate": null,
+    "category_id": 101,
+    "game_id": null,
+    "invalid_count": null
+  },{
+    "id": 2012,
+    "answer": "Standardbred",
+    "question": "The American Trotting horse is the original name for this breed of horse",
+    "value": 100,
+    "airdate": null,
+    "category_id": 101,
+    "game_id": null,
+    "invalid_count": null
   }
 ]
 }`;

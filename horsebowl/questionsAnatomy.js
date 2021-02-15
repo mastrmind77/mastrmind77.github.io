@@ -109,6 +109,105 @@ var jsonAnatomy = `{
       "category_id": 104,
       "game_id": null,
       "invalid_count": null
+    },{
+      "id": 5012,
+      "answer": "205",
+      "question": "Total number of bones in the horse skeleton",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5013,
+      "answer": "2",
+      "question": "The number of kidneys a horse has",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5014,
+      "answer": "Pastern",
+      "question": "The common term for the area between the fetlock and coronet on a horse’s leg",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5015,
+      "answer": "Kidney",
+      "question": "Organ that provides a blood-filtering system that is responsible for the removal of many waste products from the body",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5016,
+      "answer": "Liver",
+      "question": "The organ of the horse that produces bile",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5017,
+      "answer": "Frog",
+      "question": "During the horseshoeing process, the horseshoe is centered on a normal foot by using the apex of this part of the hoof as guide",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5018,
+      "answer": "Ligaments",
+      "question": "Bands of fibrous tissue that attaches bones to bones",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5019,
+      "answer": "Mouth",
+      "question": "The first part of the digestive system",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5020,
+      "answer": "6",
+      "question": "The number of joints in the foreleg of the horse",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5021,
+      "answer": "Poll",
+      "question": "The bony prominence that lies between the ears of the horse",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
+    },{
+      "id": 5022,
+      "answer": "Frog",
+      "question": "This part of a horses foot absorbs concussion",
+      "value": 100,
+      "airdate": null,
+      "category_id": 104,
+      "game_id": null,
+      "invalid_count": null
     }
   ]
 }`;
