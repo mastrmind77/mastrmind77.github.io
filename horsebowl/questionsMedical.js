@@ -30,7 +30,7 @@ var jsonMedical = `{
       "invalid_count": null
     },{
       "id": 6003,
-      "answer": 100,
+      "answer": "100",
       "question": "The average temperature of a horse in degrees",
       "value": 100,
       "airdate": null,
