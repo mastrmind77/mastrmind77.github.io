@@ -2,7 +2,7 @@ class TriviaGameShow {
    constructor(element, options={}) {
 
       //Which categories we should use (or use default is nothing provided)
-      this.useCategoryIds = options.useCategoryIds || [ 1892, 4483, 88, 218];
+      //this.useCategoryIds = options.useCategoryIds || [ 1892, 4483, 88, 218];
       /*
          Default Categories pulled from https://jservice.io/search:
          ---
@@ -31,6 +31,7 @@ class TriviaGameShow {
       this.resultTextElement = element.querySelector(".result_correct-answer-text");
       this.successTextElement = element.querySelector(".result_success");
       this.failTextElement = element.querySelector(".result_fail");
+      this.questionIdElement = element.querySelector(".questionID");
    }
 
    initGame() {
@@ -95,7 +96,7 @@ const categories = [dataGeneral, dataMovement, dataMedical, dataAnatomy,
 
             //Add every clue within a category to our database of clues
             //var clues = shuffle(result.clues).splice(0,5).forEach((clue, index) => {
-            var clues = result.clues.splice(0,5).forEach((clue, index) => {
+            var clues = shuffle(result.clues).splice(0,5).forEach((clue, index) => {
                console.log(clue)
 
                //Create unique ID for this clue
@@ -106,6 +107,7 @@ const categories = [dataGeneral, dataMovement, dataMedical, dataAnatomy,
                this.clues[clueId] = {
                   question: clue.question,
                   answer: clue.answer,
+                  id: clue.id,
                   value: (index + 1) * 100
                };
             })
@@ -160,6 +162,7 @@ const categories = [dataGeneral, dataMovement, dataMedical, dataAnatomy,
       //Update the text
       this.clueTextElement.textContent = this.currentClue.question;
       this.resultTextElement.textContent = this.currentClue.answer;
+      this.questionIdElement.textContent = this.currentClue.id + " ";
 
       //Hide the result
       this.modalElement.classList.remove("showing-result");

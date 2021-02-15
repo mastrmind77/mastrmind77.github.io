@@ -153,7 +153,15 @@ body {
 .card-modal-inner {
    width: 60%;
    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-   padding-bottom: 100px;
+   margin-top: -70px;
+}
+
+.questionID {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 14px;
+
 }
 
 .result_success, .result_fail {
