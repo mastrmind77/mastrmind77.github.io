@@ -127,6 +127,7 @@ function startGame() {
   pieceCount = 0;
   //paused = false;
   //pauseGame();
+  dropInterval = 1000;
   playerReset();
   //playAudio();
   update();
