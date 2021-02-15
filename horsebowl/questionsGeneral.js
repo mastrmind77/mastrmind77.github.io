@@ -218,6 +218,69 @@ var jsonGeneral = `{
 				"category_id": 100,
 				"game_id": null,
 				"invalid_count": null
+			},{
+				"id": 1024,
+				"answer": "Bridle",
+				"question": "The headpiece that includes the bit and other accessories used for control during riding or driving",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1025,
+				"answer": "Grazing",
+				"question": "When a horse consumes standing vegetation",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1026,
+				"answer": "Leaves",
+				"question": "The most nutritious part of the hay",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1027,
+				"answer": "Bedding",
+				"question": "The term for the material used to cover the stall floor that provides comfort and absorbs moisture",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1028,
+				"answer": "Left",
+				"question": "The hand you should use to carry the halter when you are preparing to catch a horse",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1029,
+				"answer": "Curry Comb",
+				"question": "The brush that should not be used on the face and legs when grooming.",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
+			},{
+				"id": 1030,
+				"answer": "Left",
+				"question": "The side you should mount a horse from",
+				"value": 100,
+				"airdate": null,
+				"category_id": 100,
+				"game_id": null,
+				"invalid_count": null
 			}
 		]
 }`;
