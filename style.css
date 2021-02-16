@@ -112,7 +112,7 @@ p {
     }
 
     .media.media-flip {
-      grid-template-columns: 3fr 150px ;
+      grid-template-columns: 2fr 800px ;
       grid-template-areas:
         "title img"
         "bd img"
